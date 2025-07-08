@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 6</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    <div class="companion">  
+      <ul>
+        <li>in a new tab, open this <a href="https://jenniferdewalt.com/etch_a_sketch.html">link</a></li>
+        <li>without returning here, <br>without a cheating look…<br>draw the object as your remember it,<br>from your memory alone</li>
+      </ul>
+     
+    </div>
+      
+    <div class="buttons">
+        <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+        <button onclick="window.location.href='/page1.html'">Go back</button>  
+    </div>
+    
+    <div class="visions">
+      <p>
+        What is love baby don’t hurt me don’t hurt me <span class="cursor"><b>|</b></span>
+      </p>
+    </div>
+    
+  </body>
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(6);
+  });
+</script>
+
+
+        
+</html>

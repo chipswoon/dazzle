@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 8</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    <div class="companion">     
+
+     <ul>
+       <li>what could be within?</li>
+       <li>what could be so precious?</li>
+      </ul>
+    </div>
+      
+    <div class="buttons">
+        <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+        <button onclick="window.location.href='/page1.html'">Go back</button>  
+    </div>
+    
+    <div class="visions">
+      <p>The longer you look, the more<br> you may know me<span class="cursor"><b>|</b></span></p>
+      
+    </div>
+  
+  </body>
+  
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(8);
+  });
+</script>
+        
+</html>

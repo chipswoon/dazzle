@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 1</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    
+    <div class="companion">  
+      <ul>
+        <li>in a new tab, open this <a href="http://slowhotcomputer.com/" aria-label="Slow Hot Computer">link</a></li>
+        <li>click on what you find there</li>
+        <li>allow it to work its will ~<br>for as long as you are able,<br>for as long as your strength will hold</li>
+        
+      </ul>
+      
+      </div>
+    
+      <div class="buttons">
+        <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>         <button onclick="window.location.href='/page1.html'">Go back</button>  
+      </div>
+      
+    
+    <div class="visions">
+      <p>
+         time presses against us and yet you -
+      </p>
+    </div>
+    
+  </body>
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(1);
+  });
+</script>
+
+
+        
+</html>

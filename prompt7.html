@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 7</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    <div class="companion">     
+
+     <ul>
+       <li>if you could only take 1 object into the future,<br>what would it be?</li>
+       <li>type your answer in the chatbox</li>
+       <li>if you do not know how to access the chatbox, <br>perhaps there is a yet a task you have to do …</li>
+       
+      </ul>
+    </div>
+      
+    <div class="buttons">
+        <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+        <button onclick="window.location.href='/page1.html'">Go back</button>  
+    </div>
+    
+    <div class="visions">
+      <p>
+        There is still time to build something better <span class="cursor"><b>|</b></span>
+      </p>
+    </div>
+    
+  </body>
+
+<div id="cursor-chat-layer">
+    <input type="text" id="cursor-chat-box">
+  </div>
+  
+  <script type="module">
+    import { initCursorChat } from 'https://esm.sh/cursor-chat'
+    initCursorChat("your-room-name-here")
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="/cursor-style.css"/>
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(7);
+  });
+</script>
+        
+</html>

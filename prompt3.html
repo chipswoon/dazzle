@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 3</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    <div class="companion">     
+      <ul>
+        <li>when you click <b>Done</b>, you return to the pathway</li>
+        <li>while there, at any time you wish, <br>you may type a slash, like this:  / </li>
+        <li>if you do, a chat box will appear</li>
+        <li>in the chat-box, you may type <br>whatever you wish ~<br>perhaps someone will reply?<br>perhaps there are others here with you?<br>or perhaps not …</li>
+      </ul>
+          </div>
+
+     
+      <div class="buttons">
+        <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+        <button onclick="window.location.href='/page1.html'">Go back</button>  
+      </div>
+    
+   <div class="visions">
+      <p>We could not do this alone, we would not want you to<span class="cursor"><b>|</b></span></p>
+    </div>
+    
+  </body>
+
+ <div id="cursor-chat-layer">
+    <input type="text" id="cursor-chat-box">
+  </div>
+  
+  <script type="module">
+    import { initCursorChat } from 'https://esm.sh/cursor-chat'
+    initCursorChat("your-room-name-here")
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="/cursor-style.css"/>
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+     
+    localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(3);
+  });
+</script>
+        
+</html>

@@ -1,0 +1,194 @@
+body {
+  background-color: black;
+  color: #00FF66;
+  padding: 0;
+  margin: 0;
+}
+
+
+a {
+  color: #00FF66;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.companion {
+  font-size: 1.1em;
+  color: #FF1493;
+  text-align: left;
+  padding: 50px;
+  margin-top: 100px;
+  margin-left: 25%;
+}
+
+
+.orb {
+  font-family: monospace;
+  font-style: italic;
+  text-align: center;
+  font-size: 2em;
+  padding: 50px;
+}
+
+.visions {
+  font-family: monospace;
+  font-style: italic;
+  text-align: center;
+  font-size: 1em;
+  padding: 50px;
+}
+
+.counter {
+  font-family: monospace;
+  font-size: 1.8em;
+  color: #0605E6;
+  background: white;
+  text-align: center;
+  align-self: center;
+  padding: 0 20px;
+
+}
+
+.cursor {
+  font-style: normal;
+  -webkit-animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {color: #222222}
+  50% {color: #00FF66}
+  100% {color: #222222}
+}
+
+
+.buttons {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+button {
+  margin: 20px 5px;
+  border-radius: 17px;
+  padding: 10px;
+  border: 2px solid lightgray;
+
+}
+
+button:hover {
+  background:linear-gradient(0deg, #00FF66, lightgray);
+}
+
+
+
+#maze {
+    background-image: url('https://cdn.glitch.global/7e198df3-edba-423a-af46-77b1b5c312e7/K544UD1A.jpeg?v=1692435914645');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.maze_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid {  
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+  ;
+}
+
+.item {
+  cursor: grab;
+  animation: glowing 8s infinite;
+}
+
+@keyframes glowing {
+  0% {background-color: black;}
+  50% {background-color: #00FF66;}
+  100% {background-color: black;}
+}
+
+.item:hover {
+    background-color: #ffffff !important;
+    color: #282828;
+}
+
+#item1 {
+  background-color: #763DD3;
+  clip-path: polygon(20% 20%, 60% 20%, 60% 60%, 100% 100%, 50% 100%, 20% 60%);
+}
+
+
+#item3 {
+  background-color: #763DD3;
+  clip-path: polygon(25% 20%, 60% 20%, 60% 100%, 0 100%, 25% 40% )
+}
+
+#item5 {
+  background-color: #763DD3;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 70% 80%, 70% 20%); 
+}
+
+#item6 {
+  background-color: #763DD3;
+  clip-path: polygon(0% 0%, 20% 40%, 80% 40%, 100% 0%, 100% 100%, 80% 60%, 20% 60%, 0% 100%); 
+}
+
+#item7 {
+  background-color: #763DD3;
+  clip-path: polygon(0% 0%, 60% 0%, 60% 20%, 100% 40%, 100% 60%, 60% 80%, 60% 100%, 0% 100%); 
+}
+
+#item8 {
+  background-color: #763DD3;
+  clip-path: polygon(0% 40%, 50% 60%, 80% 60%, 80% 90%, 50% 90%, 0% 60%); 
+}
+
+#item9 {
+  background-color: #763DD3;
+  clip-path: polygon(50% 0, 100% 0, 60% 40%, 60% 80%, 20% 80%, 20% 40%); 
+}
+
+#item10 {
+  background-color: #763DD3;
+  clip-path: polygon(20% 50%, 60% 50%, 60% 70%, 100% 80%, 100% 90%, 20% 90%); 
+}
+
+#item11 {
+  background-color: #763DD3;
+  clip-path: polygon(0% 0%, 60% 0%, 60% 20%, 60% 40%, 100% 50%, 100% 60%, 60% 60%, 60% 60%, 0% 90%, 0% 80%, 20% 60%, 20% 20%); 
+}
+
+#item12 {
+  background-color: #763DD3;
+  clip-path: polygon(0% 50%, 20% 40%, 20% 20%, 60% 20%, 60% 60%, 0% 60%); 
+}
+
+.portal {
+  background-image: url('https://cdn.glitch.global/7e198df3-edba-423a-af46-77b1b5c312e7/portal.gif?v=1694745265890');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+canvas {
+  position: absolute;
+  pointer-events: none
+}

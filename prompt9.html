@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 9</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    <div class="companion">     
+
+     <ul>
+       <li>in a new tab, open a search engine of your choice</li>
+       <li>in the search bar, type a combination of <br>any 2 words</li>
+       <li>does it yield less than a 100 search results?</li>
+       <li>if not -<br>try and try again with different words <br>until it does</li>
+      </ul>
+      
+    </div>
+      
+    <div class="buttons">
+      <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+      <button onclick="window.location.href='/page1.html'">Go back</button>  
+    </div>
+    
+    <div class="visions">
+      <p>
+        Nearly there, oh nearly <span class="cursor"><b>|</b></span>
+      </p>
+    </div>
+    
+  </body>
+
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(9);
+  });
+</script>
+
+        
+</html>

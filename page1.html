@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Maze</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <script src="/sketch.js" ></script>
+
+
+  </head>
+
+
+  <body id="maze">
+
+        <div class="grid">
+
+            <a href="/prompt1.html" class="item" id="item1" aria-label="Prompt 1"></a>
+            <div class="counter" id="item2"></div>
+            <a href="/prompt2.html" class="item" id="item3" aria-label="Prompt 2"></a>
+            <a href="" id="item4"></a>
+            <a href="/prompt3.html" class="item" id="item5" aria-label="Prompt 3"></a>
+            <a href="/prompt4.html" class="item" id="item6" aria-label="Prompt 4"></a>
+            <a href="/prompt5.html" class="item" id="item7" aria-label="Prompt 5"></a>
+            <a href="/prompt6.html" class="item" id="item8" aria-label="Prompt 6"></a>
+            <a href="/prompt7.html" class="item" id="item9" aria-label="Prompt 7"></a>
+            <a href="/prompt8.html" class="item" id="item10" aria-label="Prompt 8"></a>
+            <a href="/prompt9.html" class="item" id="item11" aria-label="Prompt 9"></a>
+            <a href="/prompt10.html" class="item" id="item12" aria-label="Prompt 10"></a>
+
+        </div>
+    
+   
+    <main></main>
+
+  
+  </body>
+
+
+  <div id="cursor-chat-layer">
+    <input type="text" id="cursor-chat-box">
+  </div>
+  
+  <script type="module">
+    import { initCursorChat } from 'https://esm.sh/cursor-chat'
+    initCursorChat("your-room-name-here")
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="/cursor-style.css"/>
+  
+  <script>
+    function checkComplete() {
+    let completedTaskCount = 0;
+    
+
+    for (let taskId = 1; taskId <= 10; taskId++) {
+        const taskCompleted = localStorage.getItem(`taskCompleted_${taskId}`);
+        if (taskCompleted === 'true') {
+            completedTaskCount++;
+        }
+    }
+    
+    document.getElementById("item2").innerHTML = "Tasks completed: " + completedTaskCount + " of 10";
+
+    
+    if (completedTaskCount === 10) {
+        document.getElementById("item4").classList.add("portal");
+        document.getElementById("item4").href = "/page2.html";
+    }
+}
+    
+    window.onload = checkComplete();
+  </script>
+        
+</html>
+
+/*
+Background image: "K544UD1A - Russian JFET opamp : weekend die-shot" by ZeptoBars is licensed under CC BY 4.0
+*/

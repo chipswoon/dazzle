@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prompt 2</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+
+  <body>
+    
+    <div class="companion">     
+    
+      <ul>
+        <li>in a new tab, or on a device of your choice -<br>sign into your instagram account</li>
+        <li>post the image below to your grid </li>
+        <li>do not caption it</li>
+        <li>wait 4 minutes and observe the responses, if any</li>
+        <li>do not reply to them, do not explain</li>
+        <li>do not delete the image till all your tasks are done </li>
+      </ul>
+      
+    </div>
+          <img src="https://cdn.glitch.global/7e198df3-edba-423a-af46-77b1b5c312e7/onelab_1695384533864.jpg?v=1695438142353" alt="glitched image of vidya and kat">
+    
+    <div class="buttons">
+        
+      <button id="doneButton" onclick="window.location.href='/page1.html'">Done</button>
+      
+      
+        <button onclick="window.location.href='/page1.html'">Go back</button>  
+    </div>
+    
+    <div class="visions">
+      <p>
+        Nobody said it was easy, no one ever said it would be so hard 😈 <span class="cursor"><b>|</b></span>
+      </p>
+    </div>
+  
+  </body>
+
+<script>
+  function markTaskAsDone(taskId) {
+
+      console.log(`Task ${taskId} marked as done`);
+      localStorage.setItem(`taskCompleted_${taskId}`, 'true');
+
+  }
+
+  document.getElementById('doneButton').addEventListener('click', () => {
+      markTaskAsDone(2);
+  });
+</script>
+
+
+        
+</html>
